@@ -1,0 +1,51 @@
+.modal_card{
+    height: 25vh;
+    width: 40%;
+    z-index: 100;
+    position: fixed;
+    top: 30vh;
+    right: 25vw;
+    overflow: hidden;
+    padding-left: 25px;
+    position: fixed;
+}
+.modal_card h2{
+   padding-left: 10px;
+     
+}
+.amt-dts{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px ;
+    padding-right: 40px ;
+    line-height: 5%;
+}
+.amt-dts h4{
+    font-size: large;
+}
+.amt-dts span{
+    margin-top: 20px;
+}
+.btn-dts{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 20px;
+   
+}
+.btn-modal{
+ width:100px;
+ height: 30px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+

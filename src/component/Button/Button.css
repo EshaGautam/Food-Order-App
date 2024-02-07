@@ -1,0 +1,12 @@
+.btn{
+    border: none;
+    color:white;
+    background-color: chocolate;
+    border-radius: 20px;
+  
+}
+
+.btn:hover{
+    background-color: brown;
+    box-shadow: 2px 2px 5px 3px rgb(175, 81, 81);
+}
