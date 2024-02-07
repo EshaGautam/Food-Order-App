@@ -16,6 +16,11 @@
  color: white;
  
 }
+.cart-button:hover{
+ background-color: antiquewhite;
+ color: black;
+   
+}
 /* .add_cart{
  margin-left: 5px;
  z-index: 1;

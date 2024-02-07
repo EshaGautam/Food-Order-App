@@ -1,0 +1,28 @@
+.form-style{
+    margin: auto;
+    margin-top: 25%;
+    margin-left:40%;
+
+}
+.form-style input{
+width:30%;
+}
+.form-style label{
+    font-weight: bold;
+    font-size: medium;
+}
+.form_btn{
+    border: none;
+    color:white;
+    background-color: chocolate;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+
+}
+
+.form_btn:hover{
+    background-color: brown;
+    box-shadow: 2px 2px 5px 3px rgb(175, 81, 81);
+}

@@ -1,5 +1,6 @@
 import "./MealItems.css"
 import Card from "../UI/Card";
+import QuantityForm from "./QuantityForm";
 
 function MealItems() {
 
@@ -35,13 +36,21 @@ const Meals = [
 ];
 
 
-const MealData = Meals.map((data,index)=>(
+const MealData = Meals.map((data, index) => (
+   
     <div className="meal-data" key={index}>
-     <h3>{data.name}</h3>
-     <p>{data.description}</p>
-     <h4>{data.price}</h4>
-    </div>
-))
+        <div >
+       <h3>{data.name}</h3>
+      <p>{data.description}</p>
+      <h4>{data.price}</h4>
+      </div>
+      <div>
+        <QuantityForm />
+      </div>
+      </div>
+  
+  
+));
 
   return (
     <Card className='meal-item'>{MealData}</Card>
