@@ -4,12 +4,16 @@ import Button from '../Button/Button';
 import './CartButton.css'
 
 function CartButton() {
+
   return (
-    <div className='cart-button'>
-      <FaShoppingCart className='icon'/>
-      <Button className='add_cart'>Your-cart</Button>
-      <div className='count'>1</div>
-    </div>
+    <Button type='button' className="cart-button">
+      <FaShoppingCart className="icon" />
+      <div>
+      Your-cart
+      </div>
+      <div className="count">1</div>
+    </Button>
+  
   );
 }
 
