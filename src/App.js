@@ -1,5 +1,6 @@
 
 import Navbar from "./component/Layout/Navbar";
+import MealItems from "./component/Meals/MealItems";
 import Summary from "./component/Summary/Summary";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
      <Navbar/>
      <Summary/>
+     <MealItems/>
     </>
   );
 }

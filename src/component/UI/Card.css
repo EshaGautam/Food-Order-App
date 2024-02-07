@@ -1,12 +1,9 @@
 .Card{
-    height:30vh;
-    width: 40%;
+
      background-color: #3f3f3f;
-     margin: auto;
      border-radius: 20px;
-     margin-top:10%;
+
      color: white;
-     text-align: center;
     box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.5)
 
 }
