@@ -1,19 +1,17 @@
-
-
 import Navbar from "./component/Layout/Navbar";
-import MealItems from "./component/Meals/MealItems";
+import MealCart from "./component/Meals/MealCart";
+import MealProvider from "./component/Store/MealProvider";
 import Summary from "./component/Summary/Summary";
 
 
 function App() {
   return (
-    <>
-    <Navbar />
+    <MealProvider>
+      <Navbar />
       <Summary />
-      <MealItems/>
-      </>
-     
-  );
+      <MealCart />
+    </MealProvider>
+  )
 }
 
 export default App;
