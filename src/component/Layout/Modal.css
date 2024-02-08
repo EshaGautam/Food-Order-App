@@ -29,7 +29,7 @@
 .btn-dts{
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
     padding-right: 20px;
    

@@ -8,7 +8,7 @@ function Backdrop(props) {
   return <div className="backdrop" onClick={props.onClick}></div>;
 }
 
-function ModalOverlay() {
+function ModalOverlay(props) {
   return (
     <Card className="modal_card">
       <h2>Butter Chicken</h2>
@@ -17,8 +17,8 @@ function ModalOverlay() {
         <span>12.99</span>
       </div>
       <div className="btn-dts">
-        <Button className="btn-modal">Close</Button>
-        <Button className="btn-modal">Order</Button>
+        <Button className="btn-modal" onClick={props.onClick}>Close</Button>
+        <Button type='button' className="btn-modal">Order</Button>
       </div>
     </Card>
   );
@@ -28,11 +28,11 @@ function Modal(props) {
   return (
     <div>
       {ReactDOM.createPortal(
-        <Backdrop/>,
+        <Backdrop onClick={props.onClick} />,
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay/>,
+        <ModalOverlay onClick={props.onClick} />,
         document.getElementById("modal-root")
       )}
     </div>
