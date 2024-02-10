@@ -1,30 +1,25 @@
-import React, { useContext} from 'react'
-import './QuantityForm.css'
-import Button from '../Button/Button'
-import MealContext from '../Store/MealContext'
+import React, { useContext } from "react";
+import "./QuantityForm.css";
+import Button from "../Button/Button";
+import MealContext from "../Store/MealContext";
 
 function QuantityForm(props) {
+  const cartCtx = useContext(MealContext);
+  const { selectMealHandler, setQuantity } = cartCtx;
 
-const cartCtx = useContext(MealContext)
-const{setQuantity,selectMealHandler} = cartCtx
+  const handleQty = (event) => {
+    const newQuantity = event.target.value;
+    setQuantity(newQuantity);
+  };
 
+  const handleItemAdded = (event) => {
+    event.preventDefault();
+    selectMealHandler(props.indextoselect);
+  };
 
-
-  const handleQty =(event)=>{
-    setQuantity(event.target.value)
-  }
-  
-  const handleItemAdded =(event)=>{
-   selectMealHandler(props.indextoselect)
-    
-  
- 
-    }
-    
- 
   return (
     <div>
-      <form className="form-style">
+      <form onSubmit={handleItemAdded} className="form-style">
         <label htmlFor="qty">
           Quantity:
           <input
@@ -34,7 +29,7 @@ const{setQuantity,selectMealHandler} = cartCtx
             placeholder="0"
           ></input>
         </label>
-        <Button type="button" onClick={handleItemAdded} className="form_btn">
+        <Button type="submit" className="form_btn">
           +Add
         </Button>
       </form>
@@ -42,4 +37,4 @@ const{setQuantity,selectMealHandler} = cartCtx
   );
 }
 
-export default QuantityForm
+export default QuantityForm;

@@ -22,7 +22,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.modal_card p{
+    font-size: larger;
+    padding-left: 40%;
+}
 .cart-data {
   background-color: whitesmoke;
   color: black;
@@ -34,7 +37,10 @@
   width: 90%;
    line-height: 100%;
   display:flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  justify-content: center;
+
 
 
 }
@@ -45,8 +51,7 @@
      
 }
 .amt-dts{
-    display: flex;
-    justify-content: space-between;
+ 
     padding-left: 15px ;
     padding-right: 40px ;
     line-height: 5%;
@@ -75,4 +80,28 @@
 .qty{
     font-size: smaller;
     font-weight: 500;
+}
+.qty-btn{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-left: 20px;
+    top:-10px
+}
+.qty-btn Button{
+    width:30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+    position: relative;
+    bottom:20px
+
+}
+.total-amt{
+    display: flex;
+    justify-content:space-between;
+    padding-left: 5%;
+    padding-right: 15%;
+    flex-wrap: wrap;
 }
