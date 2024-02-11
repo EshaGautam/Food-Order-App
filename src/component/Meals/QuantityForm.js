@@ -5,7 +5,7 @@ import MealContext from "../Store/MealContext";
 
 function QuantityForm(props) {
   const cartCtx = useContext(MealContext);
-  const { selectMealHandler, setQuantity } = cartCtx;
+  const {quantity,selectMealHandler, setQuantity,setQuantityForMeal,selectedMeal} = cartCtx;
 
   const handleQty = (event) => {
     const newQuantity = event.target.value;
@@ -14,7 +14,17 @@ function QuantityForm(props) {
 
   const handleItemAdded = (event) => {
     event.preventDefault();
-    selectMealHandler(props.indextoselect);
+
+
+    const existingMeal = selectedMeal.find(
+      (meal, i) => i === props.indextoselect
+    );
+
+    if (existingMeal) {
+      setQuantityForMeal(quantity, props.indextoselect);
+    } else {
+      selectMealHandler(props.indextoselect);
+    }
   };
 
   return (

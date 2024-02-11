@@ -39,11 +39,13 @@ const MealProvider = (props) => {
 
   const selectMealHandler = (index) => {
     let selected = mealItems.filter((meal, i) => i === index);
-    setSelectedMeal((prev) => [
+
+     setSelectedMeal((prev) => [
       ...prev,
-      ...selected.map((item) => ({ ...item, index: quantity })),
-    ]);
-    console.log(selectedMeal);
+      ...selected.map((meal) => ({ ...meal, index: quantity })),
+    ])
+    
+
   };
 
   const setQuantityForMeal = (newQuantity, index) => {

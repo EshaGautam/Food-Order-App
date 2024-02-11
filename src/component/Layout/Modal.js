@@ -19,7 +19,9 @@ function ModalOverlay(props) {
   const overallTotal = selectedMeal.reduce(
     (total, meal) => total + meal.price * meal.index,
     0
-  );
+  )
+
+  
 
   const cartData =
     selectedMeal &&
@@ -46,7 +48,7 @@ function ModalOverlay(props) {
     <Card className="modal_card">
       {selectedMeal.length > 0 ? (
         <>
-          ({cartData}
+          {cartData}
           <div className="total-amt">
             <span>Total Amount</span>
             <span>{overallTotal}</span>
@@ -59,7 +61,7 @@ function ModalOverlay(props) {
               Order
             </Button>
           </div>
-          )
+          
         </>
       ) : (
         <p>CART IS EMPTY</p>
